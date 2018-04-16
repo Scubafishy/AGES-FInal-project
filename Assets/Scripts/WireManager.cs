@@ -28,7 +28,12 @@ public class WireManager : MonoBehaviour
     {
         if(Pole1.GetComponent<PoleManager>().Clicked ==true && Pole2.GetComponent<PoleManager>().Clicked == true)
         {
-            myRender.enabled = false;
+
+            //f (Pole1.GetComponent<PoleManager>().alreadyClicked == false && Pole2.GetComponent<PoleManager>().alreadyClicked == false)
+                myRender.enabled = true;
+            
         }
     }
+
+   
 }
