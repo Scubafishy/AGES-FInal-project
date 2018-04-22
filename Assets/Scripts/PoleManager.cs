@@ -25,6 +25,7 @@ public class PoleManager : MonoBehaviour
     public bool alreadyClicked = false;
 
     public LayerMask Poles;
+    public bool startPole;
 
 
     // Use this for initialization
@@ -36,7 +37,9 @@ public class PoleManager : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        turnOnNeighbors();
+        
+        
+
 
     }
 
@@ -44,19 +47,42 @@ public class PoleManager : MonoBehaviour
 
     private void turnOnNeighbors()
     {
-        if (Activated == true)
-        {
+        
             neighborNorth.GetComponent<PoleManager>().canBeClicked = true;
+        
             neighborSouth.GetComponent<PoleManager>().canBeClicked = true;
+
+        
             neighborWest.GetComponent<PoleManager>().canBeClicked = true;
             neighborEast.GetComponent<PoleManager>().canBeClicked = true;
-        }
 
 
-       
+
+        
 
     }
 
+    private void turnOffNeighbors()
+    {
+        if(Activated == true)
+        {
+
+        }
+
+        else
+        {
+            neighborNorth.GetComponent<PoleManager>().canBeClicked = false;
+
+            neighborSouth.GetComponent<PoleManager>().canBeClicked = false;
+            neighborWest.GetComponent<PoleManager>().canBeClicked = false;
+            neighborEast.GetComponent<PoleManager>().canBeClicked = false;
+
+
+        }
+
+    }
+
+ 
     private void OnMouseDown()
     {
         if (canBeClicked == true && alreadyClicked == false)
@@ -71,13 +97,21 @@ public class PoleManager : MonoBehaviour
 
             alreadyClicked = true;
 
-            neighborNorth.GetComponent<PoleManager>().canBeClicked = false;
-            neighborSouth.GetComponent<PoleManager>().canBeClicked = false;
-            neighborWest.GetComponent<PoleManager>().canBeClicked = false;
-            neighborEast.GetComponent<PoleManager>().canBeClicked = false;
+            canBeClicked = false;
+
+            turnOnNeighbors();
+
+
+            neighborNorth.GetComponent<PoleManager>().turnOffNeighbors();
+
+            neighborSouth.GetComponent<PoleManager>().turnOffNeighbors();
+            neighborWest.GetComponent<PoleManager>().turnOffNeighbors();
+            neighborEast.GetComponent<PoleManager>().turnOffNeighbors();
+
+
         }
 
-        else if (alreadyClicked == true && canBeClicked == true)
+        else if (Clicked == true && canBeClicked == false)
         {
             Debug.Log("I'm already active");
         }
@@ -88,6 +122,8 @@ public class PoleManager : MonoBehaviour
         }
 
     }
+
+
 
     //private void boolCHeck()
     //{

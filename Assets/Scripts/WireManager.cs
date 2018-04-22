@@ -11,6 +11,7 @@ public class WireManager : MonoBehaviour
     GameObject Pole2;
 
     private Renderer myRender;
+    private bool alreadyOn = false;
 
     // Use this for initialization
     void Start ()
@@ -24,16 +25,22 @@ public class WireManager : MonoBehaviour
         activateWire();
     }
 
-    private void activateWire()
+    public void activateWire()
     {
-        if(Pole1.GetComponent<PoleManager>().Clicked ==true && Pole2.GetComponent<PoleManager>().Clicked == true)
-        {
+        
+            if (Pole1.GetComponent<PoleManager>().Clicked ==true && Pole2.GetComponent<PoleManager>().Clicked == true)
+            {
 
             //f (Pole1.GetComponent<PoleManager>().alreadyClicked == false && Pole2.GetComponent<PoleManager>().alreadyClicked == false)
                 myRender.enabled = true;
+                
             
-        }
+            }
+
+        
     }
+   
+
 
    
 }
