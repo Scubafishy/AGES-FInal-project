@@ -22,7 +22,7 @@ public class WireManager : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        activateWire();
+        
     }
 
     public void activateWire()
@@ -31,7 +31,7 @@ public class WireManager : MonoBehaviour
             if (Pole1.GetComponent<PoleManager>().Clicked ==true && Pole2.GetComponent<PoleManager>().Clicked == true)
             {
 
-            //f (Pole1.GetComponent<PoleManager>().alreadyClicked == false && Pole2.GetComponent<PoleManager>().alreadyClicked == false)
+           // if (Pole1.GetComponent<PoleManager>().alreadyHasWire == false && Pole2.GetComponent<PoleManager>().alreadyHasWire == false)
                 myRender.enabled = true;
                 
             

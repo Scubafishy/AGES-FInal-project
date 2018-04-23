@@ -14,13 +14,35 @@ public class PoleManager : MonoBehaviour
     [SerializeField]
     GameObject neighborSouth;
 
+
+    [SerializeField]
+    GameObject wireNorth;
+    [SerializeField]
+    GameObject wireWest;
+    [SerializeField]
+    GameObject wireEast;
+    [SerializeField]
+    GameObject wireSouth;
+
+    [SerializeField]
+    GameObject activeCircle;
+
+
     public bool Clicked = false;
 
     public bool canBeClicked = false;
 
     public bool Activated = false;
+    public  bool wire1 = false;
+    public  bool wire2 = false;
+
+    public bool wiresFull = false;
 
     
+
+
+
+
 
     public bool alreadyClicked = false;
 
@@ -29,42 +51,50 @@ public class PoleManager : MonoBehaviour
 
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
-		
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-        
-        
-
 
     }
 
-   
+    // Update is called once per frame
+    void Update()
+    {
+
+        if(Activated == true)
+        {
+            activeCircle.SetActive(true);
+        }
+        else
+        {
+            activeCircle.SetActive(false);
+        }
+        
+
+    }
+
+
 
     private void turnOnNeighbors()
     {
-        
-            neighborNorth.GetComponent<PoleManager>().canBeClicked = true;
-        
-            neighborSouth.GetComponent<PoleManager>().canBeClicked = true;
 
-        
-            neighborWest.GetComponent<PoleManager>().canBeClicked = true;
-            neighborEast.GetComponent<PoleManager>().canBeClicked = true;
+        neighborNorth.GetComponent<PoleManager>().turnOn();
+        neighborSouth.GetComponent<PoleManager>().turnOn();
+        neighborWest.GetComponent<PoleManager>().turnOn();
+        neighborEast.GetComponent<PoleManager>().turnOn();
 
+    }
 
-
-        
-
+    public void turnOn()
+    {
+        if (alreadyClicked == false)
+        {
+            canBeClicked = true;
+        }
     }
 
     private void turnOffNeighbors()
     {
-        if(Activated == true)
+        if (Activated == true)
         {
 
         }
@@ -82,12 +112,32 @@ public class PoleManager : MonoBehaviour
 
     }
 
- 
+
     private void OnMouseDown()
     {
         if (canBeClicked == true && alreadyClicked == false)
         {
             Clicked = true;
+            if(neighborNorth.GetComponent<PoleManager>().Activated == true)
+            {
+                 wireNorth.SetActive(true);
+            }
+
+            else if (neighborSouth.GetComponent<PoleManager>().Activated == true)
+            {
+                wireSouth.SetActive(true);
+            }
+
+            else if (neighborEast.GetComponent<PoleManager>().Activated == true)
+            {
+                wireEast.SetActive(true);
+            }
+
+            else if (neighborWest.GetComponent<PoleManager>().Activated == true)
+            {
+                wireWest.SetActive(true);
+            }
+
             Activated = true;
             Debug.Log("I was clicked");
             neighborNorth.GetComponent<PoleManager>().Activated = false;
@@ -111,10 +161,15 @@ public class PoleManager : MonoBehaviour
 
         }
 
-        else if (Clicked == true && canBeClicked == false)
+        else if (Clicked == true && canBeClicked == true)
         {
             Debug.Log("I'm already active");
+
+
         }
+
+
+
 
         else if (canBeClicked == false)
         {
@@ -123,13 +178,5 @@ public class PoleManager : MonoBehaviour
 
     }
 
-
-
-    //private void boolCHeck()
-    //{
-    //    if(Clicked == true)
-    //    {
-    //        Debug.Log("I'm true now");
-    //    }
-    //}
+    
 }
