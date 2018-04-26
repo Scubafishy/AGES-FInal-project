@@ -81,8 +81,32 @@ public class PoleManager : MonoBehaviour
 
     public void turnOn()
     {
-        
+        if(alreadyClicked == false)
+        {
+
             canBeClicked = true;
+        }
+
+        else
+        {
+            if(neighborNorth.GetComponent<PoleManager>().Activated == true && wireNorth.activeSelf == true)
+            {
+                canBeClicked = true;
+            }
+
+            else if (neighborSouth.GetComponent<PoleManager>().Activated == true && wireSouth.activeSelf == true)
+            {
+                canBeClicked = true;
+            }
+            else if (neighborEast.GetComponent<PoleManager>().Activated == true && wireEast.activeSelf == true)
+            {
+                canBeClicked = true;
+            }
+            else if (neighborWest.GetComponent<PoleManager>().Activated == true && wireWest.activeSelf == true)
+            {
+                canBeClicked = true;
+            }
+        }
         
     }
 
@@ -134,6 +158,10 @@ public class PoleManager : MonoBehaviour
 
             Activated = true;
             Debug.Log("I was clicked");
+
+            turnOnNeighbors();
+
+
             neighborNorth.GetComponent<PoleManager>().Activated = false;
             neighborSouth.GetComponent<PoleManager>().Activated = false;
             neighborWest.GetComponent<PoleManager>().Activated = false;
