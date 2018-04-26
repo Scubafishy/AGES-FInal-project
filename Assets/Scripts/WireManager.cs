@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class WireManager : MonoBehaviour
 {
-    [SerializeField]
-    GameObject Pole1;
+    //[SerializeField]
+    //GameObject Pole1;
 
-    [SerializeField]
-    GameObject Pole2;
+    //[SerializeField]
+    //GameObject Pole2;
 
     private Renderer myRender;
     private bool alreadyOn = false;
@@ -22,23 +22,26 @@ public class WireManager : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
+      
+        
+            
         
     }
 
-    public void activateWire()
-    {
+    //public void activateWire()
+    //{
         
-            if (Pole1.GetComponent<PoleManager>().Clicked ==true && Pole2.GetComponent<PoleManager>().Clicked == true)
-            {
+    //        if (Pole1.GetComponent<PoleManager>().Clicked ==true && Pole2.GetComponent<PoleManager>().Clicked == true)
+    //        {
 
-           // if (Pole1.GetComponent<PoleManager>().alreadyHasWire == false && Pole2.GetComponent<PoleManager>().alreadyHasWire == false)
-                myRender.enabled = true;
+    //       // if (Pole1.GetComponent<PoleManager>().alreadyHasWire == false && Pole2.GetComponent<PoleManager>().alreadyHasWire == false)
+    //            myRender.enabled = true;
                 
             
-            }
+    //        }
 
         
-    }
+    //}
    
 
 

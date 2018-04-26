@@ -9,9 +9,11 @@ public class LevelEnd : MonoBehaviour
     Text endLevelText;
 	
 	// Update is called once per frame
-	void Update () {
-		
-	}
+	void Update ()
+    {
+        endgame();
+
+    }
 
     private void endgame()
     {

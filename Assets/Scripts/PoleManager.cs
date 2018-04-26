@@ -33,15 +33,9 @@ public class PoleManager : MonoBehaviour
     public bool canBeClicked = false;
 
     public bool Activated = false;
-    public  bool wire1 = false;
-    public  bool wire2 = false;
-
-    public bool wiresFull = false;
-
     
 
-
-
+    
 
 
     public bool alreadyClicked = false;
@@ -60,7 +54,7 @@ public class PoleManager : MonoBehaviour
     void Update()
     {
 
-        if(Activated == true)
+        if (Activated == true)
         {
             activeCircle.SetActive(true);
         }
@@ -68,7 +62,8 @@ public class PoleManager : MonoBehaviour
         {
             activeCircle.SetActive(false);
         }
-        
+
+
 
     }
 
@@ -86,10 +81,9 @@ public class PoleManager : MonoBehaviour
 
     public void turnOn()
     {
-        if (alreadyClicked == false)
-        {
+        
             canBeClicked = true;
-        }
+        
     }
 
     private void turnOffNeighbors()
@@ -149,7 +143,7 @@ public class PoleManager : MonoBehaviour
 
             canBeClicked = false;
 
-            turnOnNeighbors();
+            
 
 
             neighborNorth.GetComponent<PoleManager>().turnOffNeighbors();
@@ -158,13 +152,76 @@ public class PoleManager : MonoBehaviour
             neighborWest.GetComponent<PoleManager>().turnOffNeighbors();
             neighborEast.GetComponent<PoleManager>().turnOffNeighbors();
 
+            turnOnNeighbors();
+
 
         }
 
         else if (Clicked == true && canBeClicked == true)
         {
-            Debug.Log("I'm already active");
+            if (neighborNorth.GetComponent<PoleManager>().Activated == true)
+            {
+                neighborNorth.GetComponent<PoleManager>().turnOffNeighbors();
+                wireNorth.SetActive(false);
+                neighborNorth.GetComponent<PoleManager>().alreadyClicked = false;
+                neighborNorth.GetComponent<PoleManager>().Clicked = false;
+                Activated = true;
+                turnOnNeighbors();
 
+                neighborNorth.GetComponent<PoleManager>().Activated = false;
+                neighborSouth.GetComponent<PoleManager>().Activated = false;
+                neighborWest.GetComponent<PoleManager>().Activated = false;
+                neighborEast.GetComponent<PoleManager>().Activated = false;
+
+            }
+            else if (neighborSouth.GetComponent<PoleManager>().Activated == true)
+            {
+                neighborSouth.GetComponent<PoleManager>().turnOffNeighbors();
+                wireSouth.SetActive(false);
+                neighborSouth.GetComponent<PoleManager>().alreadyClicked = false;
+                neighborSouth.GetComponent<PoleManager>().Clicked = false;
+                Activated = true;
+                turnOnNeighbors();
+
+                neighborNorth.GetComponent<PoleManager>().Activated = false;
+                neighborSouth.GetComponent<PoleManager>().Activated = false;
+                neighborWest.GetComponent<PoleManager>().Activated = false;
+                neighborEast.GetComponent<PoleManager>().Activated = false;
+            }
+            else if (neighborWest.GetComponent<PoleManager>().Activated == true)
+            {
+                neighborWest.GetComponent<PoleManager>().turnOffNeighbors();
+                wireWest.SetActive(false);
+                neighborWest.GetComponent<PoleManager>().alreadyClicked = false;
+                neighborWest.GetComponent<PoleManager>().Clicked = false;
+                Activated = true;
+                turnOnNeighbors();
+
+                neighborNorth.GetComponent<PoleManager>().Activated = false;
+                neighborSouth.GetComponent<PoleManager>().Activated = false;
+                neighborWest.GetComponent<PoleManager>().Activated = false;
+                neighborEast.GetComponent<PoleManager>().Activated = false;
+            }
+            else if (neighborEast.GetComponent<PoleManager>().Activated == true)
+            {
+                neighborEast.GetComponent<PoleManager>().turnOffNeighbors();
+                wireEast.SetActive(false);
+                neighborEast.GetComponent<PoleManager>().alreadyClicked = false;
+                neighborEast.GetComponent<PoleManager>().Clicked = false;
+                Activated = true;
+                turnOnNeighbors();
+
+                neighborNorth.GetComponent<PoleManager>().Activated = false;
+                neighborSouth.GetComponent<PoleManager>().Activated = false;
+                neighborWest.GetComponent<PoleManager>().Activated = false;
+                neighborEast.GetComponent<PoleManager>().Activated = false;
+            }
+
+            else
+            {
+                Debug.Log("Boo");
+            }
+           
 
         }
 
@@ -178,5 +235,5 @@ public class PoleManager : MonoBehaviour
 
     }
 
-    
+   
 }
