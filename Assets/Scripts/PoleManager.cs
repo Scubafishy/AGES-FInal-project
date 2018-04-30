@@ -30,6 +30,9 @@ public class PoleManager : MonoBehaviour
     [SerializeField]
     GameObject endPole;
 
+    [SerializeField]
+    GameObject barrier;
+
 
 
     public bool Clicked = false;
@@ -137,13 +140,13 @@ public class PoleManager : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if(endPole.GetComponent<LevelEnd>().remainingWire == 0)
+        if (endPole.GetComponent<LevelEnd>().remainingWire == 0)
         {
             Debug.Log("Out of wire");
         }
 
 
-        else if (canBeClicked == true && alreadyClicked == false)
+        else if (canBeClicked == true && alreadyClicked == false && barrier.activeSelf == false)
         {
             clickOnPole();
 

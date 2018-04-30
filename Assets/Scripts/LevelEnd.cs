@@ -49,9 +49,10 @@ public class LevelEnd : MonoBehaviour
     }
     private void endgame()
     {
-        if (gameObject.GetComponent<PoleManager>().Clicked == true && requiredCharge == currentCharge)
+        if (gameObject.GetComponent<PoleManager>().Clicked == true && requiredCharge >= currentCharge)
         {
             levelBeat = true;
+            
         }
     }
 
@@ -59,7 +60,8 @@ public class LevelEnd : MonoBehaviour
     {
         if(levelBeat == true)
         {
-            endLevelText.text = "You Win!";
+            
+            endLevelText.text = "Level beat!";
         }
     }
 }

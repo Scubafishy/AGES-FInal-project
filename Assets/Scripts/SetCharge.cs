@@ -27,7 +27,7 @@ public class SetCharge : MonoBehaviour
         
            LevelEnd.currentCharge = LevelEnd.currentCharge + setCharge;
             
-            Debug.Log("charge increased");
+            
      
      
     }
@@ -36,7 +36,7 @@ public class SetCharge : MonoBehaviour
     {
         LevelEnd.currentCharge = LevelEnd.currentCharge - setCharge;
         
-        Debug.Log("charge decreased");
+        
     }
 
 }
