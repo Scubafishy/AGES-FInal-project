@@ -27,7 +27,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1454674576397364
 GameObject:
   m_ObjectHideFlags: 0
@@ -86,7 +86,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1454674576397364}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1057.9769, y: -665.8982, z: 0}
+  m_LocalPosition: {x: -1053.9769, y: -667.8982, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4720153886625868}
@@ -195,7 +195,7 @@ MonoBehaviour:
   wireSouth: {fileID: 0}
   activeCircle: {fileID: 1528038838315734}
   endPole: {fileID: 0}
-  barrier: {fileID: 1000506593423682}
+  barrier: {fileID: 0}
   Clicked: 0
   canBeClicked: 0
   Activated: 0

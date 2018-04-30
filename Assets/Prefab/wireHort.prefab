@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4172168474415394}
   - component: {fileID: 212211336348590898}
-  - component: {fileID: 114584329368234968}
   m_Layer: 0
   m_Name: wireHort
   m_TagString: Untagged
@@ -81,7 +80,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1131147806935834}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.69681174, y: -2.0578084, z: -0.06342995}
+  m_LocalPosition: {x: -0.69677734, y: -2.0578003, z: -0.06342995}
   m_LocalScale: {x: 1.2211094, y: 0.30903298, z: 1}
   m_Children:
   - {fileID: 4025256835265502}
@@ -118,17 +117,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114584329368234968
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1131147806935834}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0de002f3c157404898b2515bd0dd1ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &212131915231794602
 SpriteRenderer:
   m_ObjectHideFlags: 1

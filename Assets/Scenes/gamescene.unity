@@ -409,13 +409,11 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114125560843100074, guid: 19262473496665c45a511515a21d90c3,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: Pole2
       value: 
       objectReference: {fileID: 1067140881}
-    - target: {fileID: 114125560843100074, guid: 19262473496665c45a511515a21d90c3,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: Pole1
       value: 
       objectReference: {fileID: 0}
@@ -790,13 +788,11 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114584329368234968, guid: 2ac8a132361da374285a3ca482eb1b2a,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: Pole1
       value: 
       objectReference: {fileID: 1877123727}
-    - target: {fileID: 114584329368234968, guid: 2ac8a132361da374285a3ca482eb1b2a,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: Pole2
       value: 
       objectReference: {fileID: 0}
@@ -1215,30 +1211,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 1454674576397364, guid: 7497bf96e34152846bedd78c4ba5a327, type: 2}
-      propertyPath: m_Name
-      value: PowerPole (7)
-      objectReference: {fileID: 0}
-    - target: {fileID: 114223745490437788, guid: 7497bf96e34152846bedd78c4ba5a327,
-        type: 2}
-      propertyPath: Clicked
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114223745490437788, guid: 7497bf96e34152846bedd78c4ba5a327,
-        type: 2}
-      propertyPath: alreadyClicked
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114223745490437788, guid: 7497bf96e34152846bedd78c4ba5a327,
-        type: 2}
-      propertyPath: canBeClicked
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114223745490437788, guid: 7497bf96e34152846bedd78c4ba5a327,
-        type: 2}
-      propertyPath: Activated
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 114223745490437788, guid: 7497bf96e34152846bedd78c4ba5a327,
         type: 2}
       propertyPath: neighborNorth
@@ -1261,6 +1233,16 @@ Prefab:
       objectReference: {fileID: 113979831}
     - target: {fileID: 114223745490437788, guid: 7497bf96e34152846bedd78c4ba5a327,
         type: 2}
+      propertyPath: wireNorth
+      value: 
+      objectReference: {fileID: 1953675334}
+    - target: {fileID: 114223745490437788, guid: 7497bf96e34152846bedd78c4ba5a327,
+        type: 2}
+      propertyPath: wireWest
+      value: 
+      objectReference: {fileID: 1656326932}
+    - target: {fileID: 114223745490437788, guid: 7497bf96e34152846bedd78c4ba5a327,
+        type: 2}
       propertyPath: wireEast
       value: 
       objectReference: {fileID: 113979831}
@@ -1271,21 +1253,6 @@ Prefab:
       objectReference: {fileID: 113979831}
     - target: {fileID: 114223745490437788, guid: 7497bf96e34152846bedd78c4ba5a327,
         type: 2}
-      propertyPath: wireWest
-      value: 
-      objectReference: {fileID: 1656326932}
-    - target: {fileID: 114223745490437788, guid: 7497bf96e34152846bedd78c4ba5a327,
-        type: 2}
-      propertyPath: wireNorth
-      value: 
-      objectReference: {fileID: 1953675334}
-    - target: {fileID: 114223745490437788, guid: 7497bf96e34152846bedd78c4ba5a327,
-        type: 2}
-      propertyPath: activeCircle
-      value: 
-      objectReference: {fileID: 254562952}
-    - target: {fileID: 114223745490437788, guid: 7497bf96e34152846bedd78c4ba5a327,
-        type: 2}
       propertyPath: endPole
       value: 
       objectReference: {fileID: 1509099799}
@@ -1294,14 +1261,13 @@ Prefab:
       propertyPath: barrier
       value: 
       objectReference: {fileID: 1028725271}
+    - target: {fileID: 1454674576397364, guid: 7497bf96e34152846bedd78c4ba5a327, type: 2}
+      propertyPath: m_Name
+      value: PowerPole (7)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7497bf96e34152846bedd78c4ba5a327, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &254562952 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1528038838315734, guid: 7497bf96e34152846bedd78c4ba5a327,
-    type: 2}
-  m_PrefabInternal: {fileID: 254562951}
 --- !u!1 &257876766
 GameObject:
   m_ObjectHideFlags: 0
@@ -2289,7 +2255,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4172168474415394, guid: 2ac8a132361da374285a3ca482eb1b2a, type: 2}
       propertyPath: m_RootOrder
-      value: 62
+      value: 61
       objectReference: {fileID: 0}
     - target: {fileID: 1131147806935834, guid: 2ac8a132361da374285a3ca482eb1b2a, type: 2}
       propertyPath: m_Name
@@ -2726,13 +2692,11 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114125560843100074, guid: 19262473496665c45a511515a21d90c3,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: Pole1
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 114125560843100074, guid: 19262473496665c45a511515a21d90c3,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: Pole2
       value: 
       objectReference: {fileID: 1167555767}
@@ -3328,13 +3292,11 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114125560843100074, guid: 19262473496665c45a511515a21d90c3,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: Pole1
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 114125560843100074, guid: 19262473496665c45a511515a21d90c3,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: Pole2
       value: 
       objectReference: {fileID: 1877123727}
@@ -3543,29 +3505,6 @@ Prefab:
       propertyPath: m_Name
       value: wireVert (7)
       objectReference: {fileID: 0}
-    - target: {fileID: 212249959956515748, guid: 19262473496665c45a511515a21d90c3,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114125560843100074, guid: 19262473496665c45a511515a21d90c3,
-        type: 2}
-      propertyPath: Pole2
-      value: 
-      objectReference: {fileID: 1067140881}
-    - target: {fileID: 114125560843100074, guid: 19262473496665c45a511515a21d90c3,
-        type: 2}
-      propertyPath: Pole1
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4142607130432062, guid: 19262473496665c45a511515a21d90c3, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1.2211114
-      objectReference: {fileID: 0}
-    - target: {fileID: 4142607130432062, guid: 19262473496665c45a511515a21d90c3, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.30903035
-      objectReference: {fileID: 0}
     - target: {fileID: 1593387455452642, guid: 19262473496665c45a511515a21d90c3, type: 2}
       propertyPath: m_IsActive
       value: 0
@@ -3724,6 +3663,11 @@ Prefab:
       propertyPath: m_Name
       value: PowerPole (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 114223745490437788, guid: 7497bf96e34152846bedd78c4ba5a327,
+        type: 2}
+      propertyPath: barrier
+      value: 
+      objectReference: {fileID: 1028725271}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7497bf96e34152846bedd78c4ba5a327, type: 2}
   m_IsPrefabParent: 0
@@ -3785,13 +3729,11 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114584329368234968, guid: 2ac8a132361da374285a3ca482eb1b2a,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: Pole1
       value: 
       objectReference: {fileID: 176704093}
-    - target: {fileID: 114584329368234968, guid: 2ac8a132361da374285a3ca482eb1b2a,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: Pole2
       value: 
       objectReference: {fileID: 0}
@@ -3960,13 +3902,11 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114584329368234968, guid: 2ac8a132361da374285a3ca482eb1b2a,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: Pole1
       value: 
       objectReference: {fileID: 1348584562}
-    - target: {fileID: 114584329368234968, guid: 2ac8a132361da374285a3ca482eb1b2a,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: Pole2
       value: 
       objectReference: {fileID: 1067140881}
@@ -4879,6 +4819,21 @@ Prefab:
       propertyPath: barrier
       value: 
       objectReference: {fileID: 1028725271}
+    - target: {fileID: 114075087944054676, guid: 1e4fc9eebd0ab0c429c9cafd42f4f783,
+        type: 2}
+      propertyPath: Clicked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114075087944054676, guid: 1e4fc9eebd0ab0c429c9cafd42f4f783,
+        type: 2}
+      propertyPath: alreadyClicked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114075087944054676, guid: 1e4fc9eebd0ab0c429c9cafd42f4f783,
+        type: 2}
+      propertyPath: canBeClicked
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1e4fc9eebd0ab0c429c9cafd42f4f783, type: 2}
   m_IsPrefabParent: 0
@@ -5256,13 +5211,11 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114584329368234968, guid: 2ac8a132361da374285a3ca482eb1b2a,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: Pole1
       value: 
       objectReference: {fileID: 1167555767}
-    - target: {fileID: 114584329368234968, guid: 2ac8a132361da374285a3ca482eb1b2a,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: Pole2
       value: 
       objectReference: {fileID: 0}
@@ -5600,13 +5553,11 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114125560843100074, guid: 19262473496665c45a511515a21d90c3,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: Pole1
       value: 
       objectReference: {fileID: 689250827}
-    - target: {fileID: 114125560843100074, guid: 19262473496665c45a511515a21d90c3,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: Pole2
       value: 
       objectReference: {fileID: 176704093}
@@ -5782,7 +5733,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4172168474415394, guid: 2ac8a132361da374285a3ca482eb1b2a, type: 2}
       propertyPath: m_RootOrder
-      value: 61
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 1131147806935834, guid: 2ac8a132361da374285a3ca482eb1b2a, type: 2}
       propertyPath: m_Name
@@ -6095,13 +6046,11 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114584329368234968, guid: 2ac8a132361da374285a3ca482eb1b2a,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: Pole1
       value: 
       objectReference: {fileID: 1167555767}
-    - target: {fileID: 114584329368234968, guid: 2ac8a132361da374285a3ca482eb1b2a,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: Pole2
       value: 
       objectReference: {fileID: 689250827}
@@ -6396,13 +6345,11 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114125560843100074, guid: 19262473496665c45a511515a21d90c3,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: Pole2
       value: 
       objectReference: {fileID: 1067140881}
-    - target: {fileID: 114125560843100074, guid: 19262473496665c45a511515a21d90c3,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: Pole1
       value: 
       objectReference: {fileID: 0}
@@ -7495,7 +7442,7 @@ Prefab:
     - target: {fileID: 114223745490437788, guid: 7497bf96e34152846bedd78c4ba5a327,
         type: 2}
       propertyPath: canBeClicked
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Enabled
@@ -9575,13 +9522,11 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114125560843100074, guid: 19262473496665c45a511515a21d90c3,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: Pole1
       value: 
       objectReference: {fileID: 1348584562}
-    - target: {fileID: 114125560843100074, guid: 19262473496665c45a511515a21d90c3,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: Pole2
       value: 
       objectReference: {fileID: 1877123727}

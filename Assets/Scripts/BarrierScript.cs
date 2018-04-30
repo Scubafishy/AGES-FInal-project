@@ -27,7 +27,7 @@ public class BarrierScript : MonoBehaviour
 
     private void barrierSwitch()
     {
-        if(LevelEnd.currentCharge >= Requriedcharge)
+        if(LevelEnd.currentCharge == Requriedcharge)
         {
             Barrier.SetActive(false);
         }
