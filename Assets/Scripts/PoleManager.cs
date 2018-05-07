@@ -31,7 +31,18 @@ public class PoleManager : MonoBehaviour
     GameObject endPole;
 
     [SerializeField]
-    GameObject barrier;
+    AudioSource clickSound;
+
+    [SerializeField]
+    AudioSource goBackSound;
+
+    [SerializeField]
+    AudioSource errorSound;
+
+    [SerializeField]
+    bool hasParticle;
+
+    private new ParticleSystem[] particleSystem;
 
 
 
@@ -55,6 +66,15 @@ public class PoleManager : MonoBehaviour
     void Start()
     {
 
+    }
+
+    private void OnEnable()
+    {
+        particleSystem = GetComponentsInChildren<ParticleSystem>();
+        for (int i = 0; i < particleSystem.Length; ++i)
+        {
+            particleSystem[i].Play();
+        }
     }
 
     // Update is called once per frame
@@ -143,12 +163,23 @@ public class PoleManager : MonoBehaviour
         if (endPole.GetComponent<LevelEnd>().remainingWire == 0)
         {
             Debug.Log("Out of wire");
+            errorSound.Play();
         }
 
 
-        else if (canBeClicked == true && alreadyClicked == false && barrier.activeSelf == false)
+        else if (canBeClicked == true && alreadyClicked == false)
         {
             clickOnPole();
+            if(hasParticle == true)
+            {
+
+
+                for (int i = 0; i < particleSystem.Length; ++i)
+                {
+                    particleSystem[i].Play();
+                }
+            }
+
 
         }
 
@@ -162,12 +193,14 @@ public class PoleManager : MonoBehaviour
         else if (canBeClicked == false)
         {
             Debug.Log("im out of range");
+            errorSound.Play();
         }
 
     }
 
     private void goBack()
     {
+        goBackSound.Play();
         if (neighborNorth.GetComponent<PoleManager>().Activated == true)
         {
             endPole.GetComponent<LevelEnd>().addWire();
@@ -257,7 +290,7 @@ public class PoleManager : MonoBehaviour
         {
             wireWest.SetActive(true);
         }
-
+        clickSound.Play();
         Activated = true;
         Debug.Log("I was clicked");
 

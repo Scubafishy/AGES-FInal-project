@@ -12,6 +12,9 @@ public class LevelEnd : MonoBehaviour
     Text currentChargeText;
 
     [SerializeField]
+    Text requiredChargeText;
+
+    [SerializeField]
     Text remainingWireText;
 
     [SerializeField]
@@ -20,13 +23,15 @@ public class LevelEnd : MonoBehaviour
     [SerializeField]
     public  int remainingWire = 0;
 
+  
+
 
 
    
 
     public  static int currentCharge = 0;
 
-    private bool levelBeat = false;
+    public bool levelBeat = false;
 
    
     // Update is called once per frame
@@ -37,8 +42,11 @@ public class LevelEnd : MonoBehaviour
 
         currentChargeText.text = "Current charge = " + currentCharge;
         remainingWireText.text = remainingWire + (" feet of wire left");
-        
+        requiredChargeText.text = "Required charge = " + requiredCharge;
+
+
     }
+
     public void addWire()
     {
         remainingWire++;
@@ -49,9 +57,9 @@ public class LevelEnd : MonoBehaviour
     }
     private void endgame()
     {
-        if (gameObject.GetComponent<PoleManager>().Clicked == true && requiredCharge >= currentCharge)
+        if (gameObject.GetComponent<PoleManager>().Clicked == true && currentCharge  == requiredCharge)
         {
-            levelBeat = true;
+            levelBeat = true; 
             
         }
     }
